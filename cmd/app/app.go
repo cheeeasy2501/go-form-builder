@@ -16,8 +16,11 @@ func Run(ctx context.Context, l *zap.SugaredLogger, c *config.Config, db *gorm.D
 	r := echo.New()
 
 	r.GET("/forms", func(c echo.Context) error {
+<<<<<<< HEAD
 		_ = db.Raw("SELECT * FROM forms")
 	
+=======
+>>>>>>> 6e51639bc540e62dc4adfce5e5af7f57bb836381
 		return c.JSON(http.StatusOK, "Hello, World!")
 	})
 
