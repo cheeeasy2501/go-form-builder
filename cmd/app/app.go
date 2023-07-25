@@ -16,8 +16,8 @@ func Run(ctx context.Context, l *zap.SugaredLogger, c *config.Config, db *gorm.D
 	r := echo.New()
 
 	r.GET("/forms", func(c echo.Context) error {
-		tx := db.Raw("SELECT * FROM forms")
-		tx.
+		_ = db.Raw("SELECT * FROM forms")
+	
 		return c.JSON(http.StatusOK, "Hello, World!")
 	})
 
